@@ -1,5 +1,8 @@
 # RevisionairEcto
 
+[![Hex.pm](https://img.shields.io/hexpm/v/revisionair_ecto.svg)](https://hex.pm/packages/revisionair_ecto)
+
+
 A [Revisionair](https://github.com/Qqwy/elixir_revisionair) adapter based on [Ecto](https://github.com/elixir-ecto/ecto). Allows you to persist and keep track of revisions of your data structures in any of Ecto's supported databases.
 
 The things that you want to keep track of do _not_ necessarily need to be (Ecto-backed) models/schemas. _Any_ data structure can be used (even things that are not structs).
@@ -81,3 +84,10 @@ Revisionair.newest_revision(post)
 Revisionair.list_revisions(post)
 Revisionair.get_revision(post, 0)
 ```
+
+## Changelog
+
+- 1.1.0 Upgrade to Ecto 3.
+- 1.0.2 Removes superfluous and noisy logging call.
+- 1.0.1 Updates Revisionair version.
+- 1.0.0 First Stable Version.

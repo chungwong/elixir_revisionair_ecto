@@ -3,7 +3,7 @@ defmodule RevisionairEcto.Mixfile do
 
   def project do
     [app: :revisionair_ecto,
-     version: "1.0.1",
+     version: "1.1.0",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -38,9 +38,9 @@ defmodule RevisionairEcto.Mixfile do
   defp deps do
     [
       {:revisionair, "~> 0.10"},
-      {:ecto, "~> 2.0"},
-      {:postgrex, "~> 0.13"},
-      {:poison, "~> 3.1"},
+      {:ecto_sql, "~> 3.0"},
+      {:postgrex, "~> 0.14"},
+      {:jason, "~> 1.0"},
 
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
@@ -53,7 +53,7 @@ defmodule RevisionairEcto.Mixfile do
   defp aliases do
     [
       # Ensures database is reset before tests are run
-      "test": ["ecto.create --quiet", "ecto.migrate", "test"]
+      test: ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
   end
 
