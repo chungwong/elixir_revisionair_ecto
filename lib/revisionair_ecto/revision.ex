@@ -3,6 +3,7 @@ defmodule RevisionairEcto.Revision do
 
   import Ecto.Changeset
 
+  @timestamps_opts [type: :utc_datetime_usec]
   schema "revisions" do
     field(:item_type, :string)
     field(:item_id, :integer)
